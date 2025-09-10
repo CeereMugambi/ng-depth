@@ -10,10 +10,9 @@
 
     <div class="course-card">
 
-    <course-card [course]="coreCourse"></course-card>
-    <course-card [course]="rjxCourse"></course-card> 
-    <course-card [course]="ngrxCourse"></course-card>
+    <course-card (courseSelected)="OnCourseSelected($event)" [course]="coreCourse"></course-card>
+    <course-card (courseSelected)="OnCourseSelected($event)"[course]="rjxCourse"></course-card> 
+    <course-card (courseSelected)="OnCourseSelected($event)"[course]="ngrxCourse"></course-card>
 
 </div>
-
 

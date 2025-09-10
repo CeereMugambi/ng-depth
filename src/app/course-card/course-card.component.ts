@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output ,EventEmitter} from '@angular/core';
 import { Course } from '../model/course';
 
 @Component({
@@ -11,4 +11,12 @@ import { Course } from '../model/course';
 export class CourseCardComponent {
 
   @Input()course!:Course;
+
+  @Output()courseSelected=new EventEmitter<Course>();
+
+  OnclickEnroll(){
+    console.log("click button enrolled")
+    this.courseSelected.emit(this.course);
+    
+  }
 }
