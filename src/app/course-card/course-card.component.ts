@@ -15,7 +15,6 @@ export class CourseCardComponent {
   @Output()courseSelected=new EventEmitter<Course>();
 
   OnclickEnroll(){
-    console.log("click button enrolled")
     this.courseSelected.emit(this.course);
     
   }
